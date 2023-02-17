@@ -1,15 +1,17 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.groundedreason.com/wp-content/uploads/2020/03/The_Simpsons-1024x543.png);">
   <div class="container">
-    <h1>Movie Lists</h1>
+    <h1> Hello, you</h1>
     <p>Sit back and relax.</p>
   </div>
 </div>
-<h1>Movie Lists</h1>
-<div class="cards">
-  <% @lists.each do |list|%>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
-      <%= link_to list.name, list_path(list) %>
-    </div>
-  <% end %>
-</div>
-<p><%= link_to "Add a Movie List", new_list_path %>
+<div class="container">
+  <h1>Movie Lists</h1>
+  <div class="cards">
+    <% @lists.each do |list|%>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
+        <%= link_to list.name, list_path(list) %>
+      </div>
+    <% end %>
+  </div>
+  <p><%= link_to "Add a movie", new_list_path, class:'btn-purple' %>
+  </div>
