@@ -1,5 +1,5 @@
 <%= simple_form_for @list do |f| %>
   <%=f.input :name %>
-  <%=f.submit class: 'btn btn-primary m-2' %>
+  <%=f.submit 'Create List', class: 'btn btn-primary m-2' %>
 <% end %>
 <%= link_to 'Back to lists', lists_path %>
